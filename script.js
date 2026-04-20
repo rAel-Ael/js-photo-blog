@@ -18,7 +18,7 @@ fetch(apiURL)
     let html = '';
     json.forEach(pic => {
       const pictureContainer = document.createElement('div');
-      pictureContainer.classList.add('scatola-card' , 'col-12' , 'col-md-6', 'col-lg-4', 'd-flex', 'justify-content-center');
+      pictureContainer.classList.add('scatola-card' , 'scatola-card' , 'col-12' , 'col-md-6', 'col-lg-4', 'd-flex', 'justify-content-center');
       html = `
                 <div class="carta col-lg-6 mb-4" data-gallery="panorama">
                     <img src="img/pin.svg" class="pin" alt="puntina">
@@ -36,11 +36,21 @@ fetch(apiURL)
       //qui
       pictureContainer.innerHTML = html
 
-      pictureContainer.addEventListener("click", function(){ console.log(pic.url); });
+      pictureContainer.addEventListener("click", function () {
+        console.log(pic.url); 
+        
+        let divPrev = document.getElementById('prev-foto');
+        divPrev.classList.remove('d-none');
+
+        let img = document.getElementById('foto');
+        img.src = pic.url
+
+
+      });
       
       container.appendChild(pictureContainer)
 
-    
+      
     }) 
   })
 .catch(error => {
