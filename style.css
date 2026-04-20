@@ -9,6 +9,7 @@ body {
     margin: 0;
     background-image: url("/img/cork.png");
 }
+
 .header-titolo {
     background-image: url("/img/wall.png");
 }
@@ -22,7 +23,6 @@ h1 {
     position: absolute;
     top: -15px;
     left: 45%;
-    transform: translateX(-50%);
     z-index: 2;
 }
 
@@ -34,12 +34,50 @@ h1 {
     transform: rotate(-2deg);
     transition: 0.3s;
 }
+
 .carta {
     position: relative;
     cursor: pointer;
+
 }
-.carta:hover .polaroid {
+
+
+.polaroid:hover {
     transform: rotate(0deg) scale(1.05);
+
+
+}
+
+.img:hover .pin {
+    display: none;
+}
+
+.btn-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.chiudi {
+    max-width: 50px;
+}
+
+.img-focus {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+#anteFoto {
+    width: 100%;
+    height: 80vh;
 }
 
 .img {
@@ -48,11 +86,13 @@ h1 {
     aspect-ratio: 1;
 
 }
-.foto{
-    width: 100% ;
-    height: 100% ;
+
+.foto {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
+
 .info {
     margin-top: 8px;
 }

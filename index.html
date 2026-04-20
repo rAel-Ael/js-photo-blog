@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
 </head>
+
 <body class="wall">
-    
+
     <header class="text-center header-titolo py-4">
         <h1 class="fw-bold ">ESTATE '24</h1>
 
     </header>
-    
+
     <main class="container-fluid mt-4 cork  =">
         <div class="row g-4" id="card-container">
-            
+
         </div>
+
         <div class="img-focus d-none" id="prev-foto">
-            <img id="foto" src="" alt="foto esperienze">
+            <div class="btn-foto">
+                <button type="button" id="chiudi" class="chiudi btn btn-danger">X</button> 
+                <img id="anteFoto" src="" alt="foto esperienze">
+            </div>
         </div>
     </main>
-<script src="script.js" ></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
