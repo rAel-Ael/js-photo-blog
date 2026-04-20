@@ -18,7 +18,7 @@ fetch(apiURL)
     let html = '';
     json.forEach(pic => {
       const pictureContainer = document.createElement('div');
-      pictureContainer.classList.add('scatola-card');
+      pictureContainer.classList.add('scatola-card' , 'col-12' , 'col-md-6', 'col-lg-4', 'd-flex', 'justify-content-center');
       html = `
                 <div class="carta col-lg-6 mb-4" data-gallery="panorama">
                     <img src="img/pin.svg" class="pin" alt="puntina">
@@ -40,7 +40,7 @@ fetch(apiURL)
       
       container.appendChild(pictureContainer)
 
-      
+    
     }) 
   })
 .catch(error => {

@@ -21,7 +21,7 @@ h1 {
     width: 30px;
     position: absolute;
     top: -15px;
-    left: 50%;
+    left: 45%;
     transform: translateX(-50%);
     z-index: 2;
 }
